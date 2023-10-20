@@ -9,19 +9,20 @@ header{
 
 body{
     margin: 0px;
+    background: aliceblue;
 }
 
-a{
-    color: white;
-}
+/* a{
+    color: black;
+} */
 
 .header-right{
-    width: 20%;
+    width: 35%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
-    margin-right: 10rem;
+    /* margin-right: 5rem; */
 }
 .header-left{
     /* background-color: blue; */
@@ -38,3 +39,31 @@ img{
 .settings-dropdown{
     border-width: 0px;
 }
+
+.status-bar {
+    display: flex;
+    border: 1px ;
+    border-style: dotted;
+    border-width: 1px;
+    margin: 10px;
+    margin-left: 10px;
+    justify-content: space-evenly;
+    width: 400px;
+  }
+  
+  .tab {
+    padding: 10px 20px; 
+    align-items: start ;
+    color: black;
+  }
+  
+  .tab.active {
+    background: #ddd;
+  }
+  .status {
+    padding: 10px 20px; 
+    background-color: gray;
+  }
+  .select-accounts{
+    padding: 10px 20px; 
+  }
