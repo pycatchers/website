@@ -1,40 +1,111 @@
-header{
-    background-color: rgb(93, 93, 207);
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+header {
+  background-color: rgb(93, 93, 207);
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-body{
-    margin: 0px;
+.header-right {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+}
+.header-left {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
 }
 
-a{
-    color: white;
+img {
+  margin-left: 15px;
 }
 
-.header-right{
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 10rem;
-}
-.header-left{
-    /* background-color: blue; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
+.settings-dropdown {
+  border-width: 0px;
 }
 
-img{
-    margin-left: 15px;
+/* Footer content css */
+footer {
+  background-color: rgb(93, 93, 207);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.settings-dropdown{
-    border-width: 0px;
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.card-container {
+  display: flex; /* Display the cards in a row */
+  justify-content: space-between; /* Space cards evenly */
+  color: rgb(81, 79, 79);
+}
+
+/* CSS for individual card */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 30%; /* Adjust the width as needed */
+  background-color: #fff;
+  margin: 10px; /* Add spacing between cards */
+}
+
+/* CSS for card title */
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CSS for card content */
+.card-content {
+  margin-top: 0px;
+}
+
+/* Style for the page container */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  /* Styles for your main content container */
+  margin: 20px;
+  padding: 20px;
+  color: darkgrey;
+  /* Add any other styles you need for your content */
+}
+
+.page-numbers {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: #fff;
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+}
+
+.page-numbers span {
+  margin: 0 10px;
+  font-size: 14px;
+  /* Add any other styles you need for your page numbers */
 }
