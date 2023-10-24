@@ -1,69 +1,69 @@
-header{
-    background-color: rgb(93, 93, 207);
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+header {
+  background-color: rgb(93, 93, 207);
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-body{
-    margin: 0px;
-    background: aliceblue;
+body {
+  margin: 0px;
+  background: aliceblue;
 }
 
 /* a{
     color: black;
 } */
 
-.header-right{
-    width: 35%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    /* margin-right: 5rem; */
+.header-right {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-right: 5rem; */
 }
-.header-left{
-    /* background-color: blue; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
-}
-
-img{
-    margin-left: 15px;
+.header-left {
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
 }
 
-.settings-dropdown{
-    border-width: 0px;
+img {
+  margin-left: 15px;
+}
+
+.settings-dropdown {
+  border-width: 0px;
 }
 
 .status-bar {
-    display: flex;
-    border: 1px ;
-    border-style: dotted;
-    border-width: 1px;
-    margin: 10px;
-    margin-left: 10px;
-    justify-content: space-evenly;
-    width: 400px;
-  }
-  
-  .tab {
-    padding: 10px 20px; 
-    align-items: start ;
-    color: black;
-  }
-  
-  .tab.active {
-    background: #ddd;
-  }
-  .status {
-    padding: 10px 20px; 
-    background-color: gray;
-  }
-  .select-accounts{
-    padding: 10px 20px; 
-  }
+  display: flex;
+  border: 1px;
+  border-style: dotted;
+  border-width: 1px;
+  margin: 10px;
+  margin-left: 10px;
+  justify-content: space-evenly;
+  width: 400px;
+}
+
+.tab {
+  padding: 10px 20px;
+  align-items: start;
+  color: black;
+}
+
+.tab.active {
+  background: #ddd;
+}
+.status {
+  padding: 10px 20px;
+  background-color: gray;
+}
+.select-accounts {
+  padding: 10px 20px;
+}
