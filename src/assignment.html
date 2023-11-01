@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forbes Billionaires</title>
+  </head>
+  <body>
+    <input type="file" id="jsonFileInput" />
+    <button onclick="loadJSON()">Load JSON</button>
+    <div id="output"></div>
+
+    <script>
+      let forbesBillionaires = [];
+
+      function loadJSON() {
+        const fileInput = document.getElementById("jsonFileInput");
+        const outputDiv = document.getElementById("output");
+
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          try {
+            forbesBillionaires = JSON.parse(e.target.result);
+            outputDiv.textContent = "JSON loaded successfully!";
+
+            groupByIndustry();
+            filterBelow40();
+            findMinMaxAged();
+            getTechBillionaires();
+            getIndianBillionaires();
+          } catch (error) {
+            outputDiv.textContent = "Error loading JSON: " + error;
+          }
+        };
+
+        if (file) {
+          reader.readAsText(file);
+        }
+      }
+
+      function groupByIndustry() {
+        const billionairesByIndustry = forbesBillionaires.reduce(
+          (acc, billionaire) => {
+            if (!acc[billionaire.Industry]) {
+              acc[billionaire.Industry] = [];
+            }
+            acc[billionaire.Industry].push(billionaire);
+            return acc;
+          },
+          {}
+        );
+
+        // Display the grouped data on the console
+        console.log(billionairesByIndustry);
+      }
+
+      function filterBelow40() {
+        const below40Billionaires = forbesBillionaires.filter(
+          (billionaire) => billionaire.Age < 40
+        );
+
+        // Display the filtered data on the console
+        console.log(below40Billionaires);
+      }
+
+      function findMinMaxAged() {
+        const sortedBillionairesByAge = [...forbesBillionaires].sort(
+          (a, b) => a.Age - b.Age
+        );
+
+        const youngestBillionaire = sortedBillionairesByAge[0];
+        const oldestBillionaire =
+          sortedBillionairesByAge[sortedBillionairesByAge.length - 1];
+
+        // Display the youngest and oldest billionaires on the console
+        console.log("Youngest:", youngestBillionaire);
+        console.log("Oldest:", oldestBillionaire);
+      }
+
+      function getTechBillionaires() {
+        const techBillionaires = forbesBillionaires.filter(
+          (billionaire) => billionaire.Industry === "Technology"
+        );
+
+        // Display the list of tech billionaires on the console
+        console.log(techBillionaires);
+      }
+
+      function getIndianBillionaires() {
+        const indianBillionaires = forbesBillionaires.filter(
+          (billionaire) => billionaire.Country === "India"
+        );
+
+        // Display the list of Indian billionaires on the console
+        console.log(indianBillionaires);
+      }
+    </script>
+  </body>
+</html>
